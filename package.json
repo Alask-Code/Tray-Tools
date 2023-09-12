@@ -4,10 +4,29 @@
   "description": "",
   "main": "electron/main.js",
   "scripts": {
-    "preview": "electron ."
+    "preview": "electron .",
+    "build": "electron-builder -p never",
+    "publish": "electron-builder -p always"
+  },
+  "build": {
+    "productName": "Tray Tools",
+    "appId": "com.alaskcode.traytools",
+    "extraFiles": [
+      "README.md",
+      "NOTICE.md",
+      "LICENSE.md"
+    ],
+    "nsis": {
+      "publish": {
+        "provider": "github",
+        "owner": "Alask-code",
+        "repo": "Tray-Tools"
+      },
+      "oneClick": true
+    }
   },
   "keywords": [],
-  "author": "",
+  "author": "Alex Rodrigues",
   "license": "LGPL-3.0-or-later",
   "devDependencies": {
     "electron": "^26.2.0",
