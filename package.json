@@ -26,7 +26,7 @@
     }
   },
   "keywords": [],
-  "author": "Alex Rodrigues",
+  "author": "Alask-code",
   "license": "LGPL-3.0-or-later",
   "devDependencies": {
     "electron": "^26.2.0",
