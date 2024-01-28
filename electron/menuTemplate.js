@@ -1,6 +1,6 @@
 const { exec } = require('child_process')
 const { log } = require('console')
-const { app, dialog } = require('electron')
+const { app, dialog, Notification } = require('electron')
 module.exports = [
     {
         label: 'JSON Server',
@@ -26,8 +26,7 @@ module.exports = [
             },
             {
                 label: 'Nova Guia inPrivate',
-                click: () => { exec('start msedge -–inprivate') },
-                enabled: false,
+                click: () => { exec('start msedge.exe "" -inprivate') },
             }
         ]
     },
@@ -41,7 +40,16 @@ module.exports = [
             {
                 label: 'Abrir Projeto...',
                 click: () => {
-                    exec(`code "${dialog.showOpenDialogSync({ properties: ['openDirectory'] }).toString()}"`)
+                  let path
+                  try {
+                    path = dialog.showOpenDialogSync({ properties: ['openDirectory'] }).toString()
+                    exec(`code "${path}"`)
+                  } catch (error) {
+                    new Notification({
+                      title: 'Erro',
+                      body: 'Nenhum arquivo foi selecionado.'
+                    }).show()
+                  }
                 }
             }
         ]
@@ -51,7 +59,7 @@ module.exports = [
         submenu: [
             {
                 label: 'Novo Terminal',
-                click: () => { exec('start cmd') }
+                click: () => { exec('start cmd',) }
             }
         ]
     }, {
@@ -64,6 +72,7 @@ module.exports = [
         ],
         enabled: false,
     },
+    { type:'separator'},
     {
         label: 'Sair',
         click: () => { app.quit() }
