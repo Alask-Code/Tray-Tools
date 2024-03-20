@@ -5,11 +5,11 @@ module.exports = [
     label: 'Microsoft Edge',
     submenu: [
       {
-        label: 'Nova Guia',
+        label: 'New Tab',
         click: () => { exec('start msedge'); }
       },
       {
-        label: 'Nova Guia inPrivate',
+        label: 'New InPrivate Tab',
         click: () => { exec('start msedge.exe "" -inprivate'); }
       }
     ]
@@ -18,11 +18,11 @@ module.exports = [
     label: 'VS Code',
     submenu: [
       {
-        label: 'Abrir VS Code',
+        label: 'Open VS Code',
         click: () => { exec('code'); }
       },
       {
-        label: 'Abrir Projeto...',
+        label: 'Open Project...',
         click: () => {
           let path;
           try {
@@ -30,8 +30,8 @@ module.exports = [
             exec(`code "${path}"`);
           } catch (error) {
             new Notification({
-              title: 'Erro',
-              body: 'Nenhum arquivo foi selecionado.'
+              title: 'Error',
+              body: 'No file selected.'
             }).show();
           }
         }
@@ -39,26 +39,26 @@ module.exports = [
     ]
   },
   {
-    label: 'Prompt de Comando',
+    label: 'Command Prompt',
     submenu: [
       {
-        label: 'Novo Terminal',
+        label: 'New Terminal',
         click: () => { exec('start cmd'); }
       }
     ]
   }, {
-    label: 'Configurações',
+    label: 'Settings',
     submenu: [
-      { label: 'Linguagem' },
-      { label: 'Procurar Atualizações' },
-      { label: 'Sobre o Projeto' },
-      { label: 'Ajuda' }
+      { label: 'Language' },
+      { label: 'Search for Updates' },
+      { label: 'About Project' },
+      { label: 'Help' }
     ],
     enabled: false
   },
   { type: 'separator' },
   {
-    label: 'Sair',
+    label: 'Quit',
     click: () => { app.quit(); }
   }
 ];
