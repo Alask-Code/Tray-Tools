@@ -1,22 +1,6 @@
 const { exec } = require('child_process')
-const { log } = require('console')
 const { app, dialog, Notification } = require('electron')
 module.exports = [
-    {
-        label: 'JSON Server',
-        submenu: [
-            {
-                label: 'Iniciar Servidor Local'
-            },
-            {
-                label: 'Parar Servidor Local'
-            },
-            {
-                label: 'Configurações JSON Server'
-            }
-        ],
-        enabled: false
-    },
     {
         label: 'Microsoft Edge',
         submenu: [
