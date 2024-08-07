@@ -4,7 +4,7 @@
   "author": "Alask-code",
   "main": "electron/main.js",
   "license": "LGPL-3.0-or-later",
-  "description": "Shortcuts for Tray.",
+  "description": "Atalhos para a Tray do Windows.",
   "scripts": {
     "elec": "nodemon --exec electron . ",
     "build": "electron-builder -p never",
@@ -13,10 +13,7 @@
   "build": {
     "productName": "Tray Tools",
     "appId": "com.alaskcode.traytools",
-    "extraFiles": [
-      "NOTICE.md",
-      "LICENSE.md"
-    ],
+    "extraFiles": [ "LICENSE.md"],
     "nsis": {
       "publish": {
         "provider": "github",

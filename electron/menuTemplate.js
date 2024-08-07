@@ -2,6 +2,11 @@ const { exec } = require('child_process');
 const { app, dialog, Notification } = require('electron');
 module.exports = [
   {
+    label: 'Tray Tools v1.2.0',
+    enabled: false
+  },
+  { type: 'separator' },
+  {
     label: 'Microsoft Edge',
     submenu: [
       {
@@ -24,9 +29,8 @@ module.exports = [
       {
         label: 'Abrir Projeto...',
         click: () => {
-          let path;
           try {
-            path = dialog.showOpenDialogSync({ properties: ['openDirectory'] }).toString();
+            const path = dialog.showOpenDialogSync({ properties: ['openDirectory'] }).toString();
             exec(`code "${path}"`);
           } catch (error) {
             new Notification({
