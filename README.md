@@ -1,17 +1,22 @@
-# Shortcuts from Windows in Your Tray.
+# Atalhos do Windows na Tray
 
-## Features
+## Atalhos
 - Microsoft Edge
+   - Nova Aba
+   - Nova Aba InPrivate
 - Visual Studio Code
+   - Abrir o programa
+   - Abrir uma Pasta
 - Command Prompt
+   - Nova Guia do Terminal
 
-## Stack
+## Stack Utilizada
  - ElectronJS
-    - Tray manager
+    - Tray Manager
  - Electron Reload
-    - Live reload support at application level
+    - Suporta live reload em nível de aplicação
  - Electron Builder
-    - Multiple platform Targets
+    - Compilação para múltiplas plataformas
 
 ## Download
-Download latest version at [Releases](https://github.com/Alask-Code/Tray-Tools/releases).
+Baixe a versão mais recente em [Releases](https://github.com/Alask-Code/Tray-Tools/releases).
