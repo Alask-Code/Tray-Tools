@@ -17,7 +17,7 @@
     "nsis": {
       "publish": {
         "provider": "github",
-        "owner": "Alask-code",
+        "owner": "Alask-Code",
         "repo": "Tray-Tools"
       },
       "oneClick": false
