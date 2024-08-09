@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "1.0.0",
   "name": "tray-tools",
   "author": "Alask-Code",
   "main": "electron/main.js",
@@ -8,7 +8,8 @@
   "scripts": {
     "elec": "nodemon --exec electron . ",
     "build": "electron-builder -p never",
-    "publish": "electron-builder -p always"
+    "publish": "electron-builder -p always",
+    "clean-git-cache": "git rm -rf --cached ."
   },
   "build": {
     "productName": "Tray Tools",

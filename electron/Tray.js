@@ -1,5 +1,5 @@
 const { Menu, Tray } = require('electron');
-const menuTemplate = require('./menuTemplate');
+const menuTemplate = require('./menuTemplate/template');
 const { resolve } = require('path');
 
 function createTray () {
