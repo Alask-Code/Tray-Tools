@@ -11,7 +11,7 @@ function createTray () {
 
   const win = createWindow();
   tray.on('click', () => {
-    windowPositioner(tray, win);
+    // windowPositioner(tray, win);
   });
 
   tray.on('right-click', () => {
