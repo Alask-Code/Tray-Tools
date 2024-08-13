@@ -4,7 +4,7 @@ const createTray = require('./Tray');
 const { appName } = require('../manifest.json');
 
 app.whenReady().then(() => {
-  const tray = createTray();
+  createTray();
 });
 
 app.setAppUserModelId(appName);
