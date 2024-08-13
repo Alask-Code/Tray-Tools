@@ -1,3 +1,4 @@
+require('electron-reload')('../src');
 const { app } = require('electron');
 const createTray = require('./Tray');
 
