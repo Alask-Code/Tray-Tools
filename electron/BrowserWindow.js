@@ -23,7 +23,7 @@ function createWindow () {
   });
   win.hide();
   win.removeMenu();
-  win.openDevTools();
+  // win.openDevTools();
   win.loadFile('src/index.html');
 
   return win;
