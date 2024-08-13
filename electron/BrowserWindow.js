@@ -1,10 +1,12 @@
 const { resolve } = require('path');
 const { BrowserWindow } = require('electron');
 const icon = resolve(__dirname, '../', 'build', 'icon.png');
+const { appName: title } = require('../manifest.json');
 
 function createWindow () {
   const win = new BrowserWindow({
     icon,
+    title,
     width: 290,
     height: 290,
     frame: false,
@@ -13,7 +15,6 @@ function createWindow () {
     // transparent: true,
     alwaysOnTop: true,
     fullscreenable: false,
-    title: 'Tray Tools',
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,

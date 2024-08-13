@@ -7,9 +7,10 @@ const {
   quit
 } = require('./functions');
 
+const { appName, version } = require('../../manifest.json');
 module.exports = [
   {
-    label: 'Tray Tools 1.0.0',
+    label: `${appName} | ${version}`,
     enabled: false
   },
   { type: 'separator' },
