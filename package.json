@@ -1,0 +1,38 @@
+{
+  "version": "1.1.0",
+  "name": "tray-tools",
+  "author": "Alask-Code",
+  "main": "electron/main.js",
+  "license": "LGPL-3.0-or-later",
+  "description": "Atalhos para a Tray do Windows.",
+  "scripts": {
+    "elec": "nodemon --exec electron . ",
+    "build": "electron-builder -p never",
+    "publish": "electron-builder -p always",
+    "clean-git-cache": "git rm -rf --cached ."
+  },
+  "build": {
+    "productName": "Tray Tools",
+    "appId": "com.alaskcode.traytools",
+    "extraFiles": [
+      "LICENSE.md"
+    ],
+    "nsis": {
+      "publish": {
+        "provider": "github",
+        "owner": "Alask-Code",
+        "repo": "Tray-Tools"
+      },
+      "oneClick": false
+    }
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "nodemon": "^3.1.4",
+    "electron": "^31.3.1",
+    "electron-reload": "^2.0.0",
+    "electron-builder": "^24.13.3",
+    "eslint-plugin-node": "^11.1.0",
+    "@electron-internal/eslint-config": "^1.0.1"
+  }
+}
