@@ -6,14 +6,14 @@ function createWindow () {
   const win = new BrowserWindow({
     icon,
     width: 290,
-    height: 510,
+    height: 290,
     frame: false,
     resizable: false,
     skipTaskbar: true,
     // transparent: true,
     alwaysOnTop: true,
     fullscreenable: false,
-    title: 'Developer Preview',
+    title: 'Tray Tools',
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
