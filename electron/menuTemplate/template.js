@@ -19,11 +19,11 @@ module.exports = [
     submenu: [
       {
         label: 'Nova Aba',
-        click: () => edgeNewTab
+        click: edgeNewTab
       },
       {
         label: 'Nova Aba InPrivate',
-        click: () => edgeNewInPrivateTab
+        click: edgeNewInPrivateTab
       }
     ]
   },
@@ -32,11 +32,11 @@ module.exports = [
     submenu: [
       {
         label: 'Abrir VS Code',
-        click: () => vsCodeOpenApp
+        click: vsCodeOpenApp
       },
       {
         label: 'Abrir Projeto...',
-        click: () => vsCodeOpenProjectFolder
+        click: vsCodeOpenProjectFolder
       }
     ]
   },
@@ -45,13 +45,13 @@ module.exports = [
     submenu: [
       {
         label: 'Novo Terminal',
-        click: () => terminalNewPrompt
+        click: terminalNewPrompt
       }
     ]
   },
   { type: 'separator' },
   {
     label: 'Fechar',
-    click: () => quit
+    click: quit
   }
 ];

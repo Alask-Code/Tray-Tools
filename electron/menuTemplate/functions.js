@@ -1,7 +1,7 @@
 const { app, dialog, Notification } = require('electron');
 
 const { exec } = require('child_process');
-
+const { log } = require('console');
 function edgeNewTab () {
   exec('start msedge');
 }
@@ -38,3 +38,4 @@ module.exports = {
   terminalNewPrompt,
   quit
 };
+log('functions loaded.');
