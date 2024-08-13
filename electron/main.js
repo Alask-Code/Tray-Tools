@@ -2,6 +2,6 @@ const { app } = require('electron');
 const createTray = require('./Tray');
 
 app.whenReady().then(() => {
-  createTray();
+  const tray = createTray();
 });
 app.setAppUserModelId('Tray Tools');
