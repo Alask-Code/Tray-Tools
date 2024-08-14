@@ -1,6 +1,7 @@
 const { resolve } = require('path');
 const { BrowserWindow } = require('electron');
 const icon = resolve(__dirname, '../', 'build', 'icon.png');
+
 const {
   appName: title,
   featureFlags: {
