@@ -8,7 +8,9 @@ const {
       options: {
         frame,
         transparent,
-        alwaysOnTop
+        alwaysOnTop,
+        skipTaskbar,
+        webPreferences
       }
     }
   }
@@ -22,15 +24,11 @@ function createWindow () {
     width: 290,
     height: 290,
     transparent,
+    skipTaskbar,
     alwaysOnTop,
+    webPreferences,
     resizable: false,
-    skipTaskbar: true,
-    fullscreenable: false,
-    webPreferences: {
-      nodeIntegration: true,
-      contextIsolation: false,
-      enableRemoteModule: true
-    }
+    fullscreenable: false
   });
   win.hide();
   win.removeMenu();
