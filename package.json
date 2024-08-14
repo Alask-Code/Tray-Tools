@@ -27,12 +27,14 @@
     }
   },
   "devDependencies": {
-    "eslint": "^8.57.0",
-    "nodemon": "^3.1.4",
+    "@electron-internal/eslint-config": "^1.0.1",
     "electron": "^31.3.1",
-    "electron-reload": "^2.0.0",
     "electron-builder": "^24.13.3",
+    "eslint": "^8.57.0",
     "eslint-plugin-node": "^11.1.0",
-    "@electron-internal/eslint-config": "^1.0.1"
+    "nodemon": "^3.1.4"
+  },
+  "dependencies": {
+    "electron-reload": "^2.0.0-alpha.1"
   }
 }
