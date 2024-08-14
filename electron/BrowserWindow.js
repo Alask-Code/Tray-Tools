@@ -12,18 +12,18 @@ function createWindow () {
     frame: false,
     resizable: false,
     skipTaskbar: true,
-    // transparent: true,
+    transparent: true,
     alwaysOnTop: true,
     fullscreenable: false,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
+      experimentalFeatures: true,
       enableRemoteModule: true
     }
   });
   win.hide();
   win.removeMenu();
-  win.openDevTools();
   win.loadFile('src/index.html');
 
   return win;

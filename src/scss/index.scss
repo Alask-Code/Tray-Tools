@@ -1,6 +1,14 @@
 @import "modules/core";
 @import "indexLightTheme";
 @import "indexDarkTheme";
+
 body {
+  padding: 5px;
   @include flex(center, center, column);
+}
+.app {
+  @include size(100%, 100%);
+  @include flex(center, center, column);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.4);
 }
