@@ -1,19 +1,30 @@
 const { resolve } = require('path');
 const { BrowserWindow } = require('electron');
 const icon = resolve(__dirname, '../', 'build', 'icon.png');
-const { appName: title } = require('../manifest.json');
+const {
+  appName: title,
+  featureFlags: {
+    BrowserWindow: {
+      options: {
+        frame,
+        transparent,
+        alwaysOnTop
+      }
+    }
+  }
+} = require('../manifest.json');
 
 function createWindow () {
   const win = new BrowserWindow({
     icon,
     title,
+    frame,
     width: 290,
     height: 290,
-    frame: false,
+    transparent,
+    alwaysOnTop,
     resizable: false,
     skipTaskbar: true,
-    transparent: true,
-    alwaysOnTop: true,
     fullscreenable: false,
     webPreferences: {
       nodeIntegration: true,
