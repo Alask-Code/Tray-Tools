@@ -1,3 +1,6 @@
+// Issue Found: https://github.com/Alask-Code/Tray-Tools/issues/12
+// Status: Not Fixed Yet.
+
 function windowPositioner (tray, win) {
   const trayBounds = tray.getBounds();
   const winSize = win.getSize();
