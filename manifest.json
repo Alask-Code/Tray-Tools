@@ -7,7 +7,7 @@
       "enabled": true,
       "options": {
         "frame": false,
-        "transparent": false,
+        "transparent": true,
         "alwaysOnTop": true,
         "skipTaskbar": true,
         "webPreferences": {
