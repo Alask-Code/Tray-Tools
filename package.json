@@ -30,7 +30,7 @@
     "@electron-internal/eslint-config": "^1.0.1",
     "electron": "^31.3.1",
     "electron-builder": "^24.13.3",
-    "eslint": "^8.57.0",
+    "eslint": "^8.57.1",
     "eslint-plugin-node": "^11.1.0",
     "nodemon": "^3.1.4"
   },
