@@ -20,16 +20,34 @@
   },
   "apps": [
     {
+      "name": "App Store",
+      "pathToApp": "",
+      "icon": "",
+      "useWidgetScreen": false
+    },
+    {
+      "name": "System Glass",
+      "pathToApp": "",
+      "icon": "",
+      "useWidgetScreen": false
+    },
+    {
+      "name": "Clock",
+      "pathToApp": "",
+      "icon": "",
+      "useWidgetScreen": false
+    },
+    {
       "name": "Settings",
-      "pathToApp": "./apps/settings/index.html",
-      "icon": "./src/assets/settings.png",
+      "pathToApp": "",
+      "icon": "",
       "useWidgetScreen": false
     },
     {
       "comment": "When useWidgetScreen is true the icon will be replaced with the widgetScreen.html",
       "name": "Launcher",
-      "pathToApp": "./apps/launcher/index.html",
-      "icon": "./src/assets/laucher.png",
+      "pathToApp": "",
+      "icon": "",
       "useWidgetScreen": true
     }
   ]
