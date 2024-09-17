@@ -4,7 +4,7 @@
   "author": "Alask-Code",
   "main": "electron/main.js",
   "license": "LGPL-3.0-or-later",
-  "description": "Atalhos para a Tray do Windows.",
+  "description": "Some Tools Direct From Your Tray.",
   "scripts": {
     "elec": "nodemon --exec electron . ",
     "build": "electron-builder -p never",

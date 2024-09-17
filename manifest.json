@@ -17,5 +17,20 @@
         }
       }
     }
-  }
+  },
+  "apps": [
+    {
+      "name": "Settings",
+      "pathToApp": "./apps/settings/index.html",
+      "icon": "./src/assets/settings.png",
+      "useWidgetScreen": false
+    },
+    {
+      "comment": "When useWidgetScreen is true the icon will be replaced with the widgetScreen.html",
+      "name": "Launcher",
+      "pathToApp": "./apps/launcher/index.html",
+      "icon": "./src/assets/laucher.png",
+      "useWidgetScreen": true
+    }
+  ]
 }
