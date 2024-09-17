@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.1.1",
   "name": "tray-tools",
   "author": "Alask-Code",
   "main": "electron/main.js",
