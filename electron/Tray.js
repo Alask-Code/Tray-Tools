@@ -6,8 +6,7 @@ const {
   featureFlags: {
     BrowserWindow: {
       enabled: isWindowEnabled
-    },
-    showLogs
+    }
   }
 } = require('../manifest.json');
 
