@@ -7,7 +7,7 @@ const {
   quit
 } = require('./functions');
 
-const { appName, version } = require('../../manifest.json');
+const { appName, version, developerMode } = require('../../manifest.json');
 module.exports = [
   {
     label: `${appName} | ${version}`,
@@ -52,6 +52,7 @@ module.exports = [
   { type: 'separator' },
   {
     label: 'Fechar',
-    click: quit
+    click: quit,
+    enabled: developerMode ? false : true
   }
 ];
