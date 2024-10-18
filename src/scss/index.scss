@@ -9,6 +9,7 @@ body {
 .menu {
   @include size(100%, 100%);
   @include flex(flex-start, center, row);
+  transition-timing-function: ease-in-out;
   padding: 2pt;
   gap: 4pt;
   overflow-x: auto;
