@@ -1,0 +1,6 @@
+{
+  "extends":["@electron-internal/eslint-config"],
+  "rules": {
+    "no-unneeded-ternary":0
+  }
+}
