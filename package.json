@@ -33,7 +33,7 @@
     "electron-builder": "^24.13.3",
     "eslint": "^8.57.0",
     "eslint-plugin-node": "^11.1.0",
-    "nodemon": "^3.1.4"
+    "nodemon": "^3.1.7"
   },
   "dependencies": {
     "electron-reload": "^2.0.0-alpha.1"
