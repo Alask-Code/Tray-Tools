@@ -1,4 +1,5 @@
-const { appName, apps } = require('../manifest.json');
+const { appName } = require('../manifest.json');
+const { apps } = require('../application/routes.json');
 document.title = appName;
 
 apps.forEach(app => {

@@ -1,11 +1,11 @@
 {
   "appName": "Tray Tools",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "developerMode": true,
+  "openDevTools": false,
   "featureFlags": {
-    "showLogs": true,
     "BrowserWindow": {
-      "enabled": true,
+      "enabled": false,
       "options": {
         "frame": false,
         "transparent": true,
@@ -18,38 +18,5 @@
         }
       }
     }
-  },
-  "apps": [
-    {
-      "name": "App Store",
-      "pathToApp": "",
-      "icon": "",
-      "useWidgetScreen": false
-    },
-    {
-      "name": "System Glass",
-      "pathToApp": "",
-      "icon": "",
-      "useWidgetScreen": false
-    },
-    {
-      "name": "Clock",
-      "pathToApp": "",
-      "icon": "",
-      "useWidgetScreen": false
-    },
-    {
-      "name": "Settings",
-      "pathToApp": "",
-      "icon": "",
-      "useWidgetScreen": false
-    },
-    {
-      "comment": "When useWidgetScreen is true the icon will be replaced with the widgetScreen.html",
-      "name": "Launcher",
-      "pathToApp": "",
-      "icon": "",
-      "useWidgetScreen": true
-    }
-  ]
+  }
 }

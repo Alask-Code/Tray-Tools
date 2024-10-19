@@ -13,6 +13,11 @@ module.exports = [
     label: `${appName} | ${version}`,
     enabled: false
   },
+  {
+    label: `Developer Mode: ${developerMode}`,
+    enabled: false,
+    visible: developerMode
+  },
   { type: 'separator' },
   {
     label: 'Microsoft Edge',
