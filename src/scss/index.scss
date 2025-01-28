@@ -1,6 +1,4 @@
 @import "modules/core";
-@import "indexLightTheme";
-@import "indexDarkTheme";
 
 body {
   @include flex(center, center, column);
@@ -30,3 +28,5 @@ body {
   height: 100%;
   box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.5);
 }
+@import "indexLightTheme";
+@import "indexDarkTheme";

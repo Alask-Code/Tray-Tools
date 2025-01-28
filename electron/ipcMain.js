@@ -1,11 +1,9 @@
 const { ipcMain } = require('electron');
-const NavigatorWindow = require('./NavigatorWindow');
+const ChildWindow = require('./ChildWindow');
 
 function registerIpcMain () {
   ipcMain.on('createWindow', (event, pathToFile) => {
-    console.log('Message Received: ' + event);
-
-    NavigatorWindow(pathToFile);
+    ChildWindow(pathToFile);
     event.reply('created window for ' + pathToFile);
   }
   );

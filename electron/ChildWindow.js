@@ -1,6 +1,6 @@
 const { BrowserWindow, app } = require('electron');
 
-function NavigatorWindow (path) {
+function ChildWindow (path) {
   const win = new BrowserWindow({
     height: 500,
     width: 700,
@@ -13,9 +13,10 @@ function NavigatorWindow (path) {
   });
 win.removeMenu()
   win.loadFile(`${path}/index.html`);
-  win.webContents.openDevTools();
+  if (developerMode) { win.openDevTools({ mode: 'detach' }); };
+
 
   return win;
 }
 
-module.exports = NavigatorWindow;
+module.exports = ChildWindow;

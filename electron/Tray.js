@@ -9,6 +9,7 @@ const {
     }
   }
 } = require('../manifest.json');
+const devLog = require('./devLog');
 
 function createTray () {
   const tray = new Tray(icon);
@@ -32,4 +33,5 @@ function createTray () {
 
   return tray;
 }
+devLog('Functions Loaded')
 module.exports = createTray;

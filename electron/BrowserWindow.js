@@ -4,7 +4,7 @@ const icon = resolve(__dirname, '../', 'build', 'icon.png');
 
 const {
   appName: title,
-  openDevTools,
+  developerMode,
   featureFlags: {
     BrowserWindow: {
       options: {
@@ -36,7 +36,7 @@ function createWindow () {
   });
   win.hide();
   win.removeMenu();
-  if (openDevTools) { win.openDevTools({ mode: 'detach' }); };
+  if (developerMode) { win.openDevTools({ mode: 'detach' }); };
   win.loadFile('src/index.html');
 
   return win;

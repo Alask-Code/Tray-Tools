@@ -6,6 +6,8 @@ const {
   terminalNewPrompt,
   quit
 } = require('./functions');
+const {hostname, userInfo} = require('os')
+const  user = userInfo()
 
 const { appName, version, developerMode } = require('../../manifest.json');
 module.exports = [
@@ -14,7 +16,12 @@ module.exports = [
     enabled: false
   },
   {
-    label: `Developer Mode: ${developerMode}`,
+    label: `Developer Mode Enabled`,
+    enabled: false,
+    visible: developerMode
+  },
+    {
+    label: `${hostname()} ${user.username}`,
     enabled: false,
     visible: developerMode
   },
