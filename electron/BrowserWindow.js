@@ -8,6 +8,8 @@ const {
   featureFlags: {
     BrowserWindow: {
       options: {
+        width,
+        height,
         frame,
         transparent,
         alwaysOnTop,
@@ -23,8 +25,8 @@ function createWindow () {
     icon,
     title,
     frame,
-    width: 190,
-    height: 190,
+    width,
+    height,
     transparent,
     skipTaskbar,
     alwaysOnTop,
@@ -34,7 +36,7 @@ function createWindow () {
   });
   win.hide();
   win.removeMenu();
-  if (openDevTools) { win.openDevTools(); };
+  if (openDevTools) { win.openDevTools({ mode: 'detach' }); };
   win.loadFile('src/index.html');
 
   return win;

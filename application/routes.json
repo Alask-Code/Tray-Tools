@@ -2,32 +2,32 @@
   "apps": [
     {
       "name": "App Store",
-      "pathToApp": "",
+      "pathToApp": "application/com.alaskcode.traytools.appstore",
       "icon": "",
       "useWidgetScreen": false
     },
     {
       "name": "System Glass",
-      "pathToApp": "",
+      "pathToApp": "application/com.alaskcode.traytools.systemglass",
       "icon": "",
       "useWidgetScreen": false
     },
     {
       "name": "Clock",
-      "pathToApp": "",
+      "pathToApp": "application/com.alaskcode.traytools.clock",
       "icon": "",
       "useWidgetScreen": false
     },
     {
       "name": "Settings",
-      "pathToApp": "",
+      "pathToApp": "application/com.alaskcode.traytools.settings",
       "icon": "",
       "useWidgetScreen": false
     },
     {
       "comment": "When useWidgetScreen is true the icon will be replaced with the widgetScreen.html",
       "name": "Launcher",
-      "pathToApp": "",
+      "pathToApp": "application/com.alaskcode.traytools.launcher",
       "icon": "",
       "useWidgetScreen": true
     }
