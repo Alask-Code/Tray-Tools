@@ -1,0 +1,21 @@
+@import "../../../src/scss/modules/core";
+
+body {
+  @include flex(start, center, column);
+  color: black;
+}
+.label {
+  @include flex(start, center, row);
+  @include size(100%, fit-content);
+  padding: 4px;
+  gap: 4px;
+  font-size: 12pt;
+}
+.updates {
+  @include flex(start, start, row);
+  @include size(100%, 100%);
+  padding: 4px;
+  font-size: 24pt;
+  font-weight: 800;
+  line-height: 24pt;
+}
