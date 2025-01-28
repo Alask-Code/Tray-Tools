@@ -36,7 +36,7 @@ function createWindow () {
   });
   win.hide();
   win.removeMenu();
-  if (openDevTools) { win.openDevTools(); };
+  if (openDevTools) { win.openDevTools({ mode: 'detach' }); };
   win.loadFile('src/index.html');
 
   return win;
