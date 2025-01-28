@@ -1,5 +1,5 @@
 const { BrowserWindow, app } = require('electron');
-
+const {developerMode} = require('../manifest.json')
 function ChildWindow (path) {
   const win = new BrowserWindow({
     height: 500,

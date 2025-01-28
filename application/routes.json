@@ -3,33 +3,33 @@
     {
       "name": "App Store",
       "pathToApp": "application/com.alaskcode.traytools.appstore",
-      "icon": "",
-      "useWidgetScreen": false
+      "icon": "ph-bag",
+      "useWidgetScreen": true
     },
     {
       "name": "System Glass",
       "pathToApp": "application/com.alaskcode.traytools.systemglass",
-      "icon": "",
+      "icon": "ph-app-window",
       "useWidgetScreen": false
     },
     {
       "name": "Clock",
       "pathToApp": "application/com.alaskcode.traytools.clock",
-      "icon": "",
+      "icon": "ph-clock",
       "useWidgetScreen": false
     },
     {
       "name": "Settings",
       "pathToApp": "application/com.alaskcode.traytools.settings",
-      "icon": "",
+      "icon": "ph-gear",
       "useWidgetScreen": false
     },
     {
       "comment": "When useWidgetScreen is true the icon will be replaced with the widgetScreen.html",
       "name": "Launcher",
       "pathToApp": "application/com.alaskcode.traytools.launcher",
-      "icon": "",
-      "useWidgetScreen": true
+      "icon": "ph-house",
+      "useWidgetScreen": false
     }
   ]
 }
