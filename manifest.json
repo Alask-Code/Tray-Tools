@@ -5,12 +5,14 @@
   "openDevTools": false,
   "featureFlags": {
     "BrowserWindow": {
-      "enabled": false,
+      "enabled": true,
       "options": {
         "frame": false,
         "transparent": true,
         "alwaysOnTop": true,
         "skipTaskbar": true,
+        "width": 125,
+        "height": 125,
         "webPreferences": {
           "nodeIntegration": true,
           "contextIsolation": false,
