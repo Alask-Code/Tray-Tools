@@ -1,19 +1,21 @@
-const { BrowserWindow, app } = require('electron'); // Certifique-se de importar corretamente
+const { BrowserWindow, app } = require('electron');
 
 function NavigatorWindow (path) {
   const win = new BrowserWindow({
-    height: 600,
-    width: 800,
+    height: 500,
+    width: 700,
+    resizable:false,
     webPreferences: {
-      nodeIntegration: true, // Use com cuidado por questões de segurança
+      nodeIntegration: true,
       contextIsolation: false
-    }
+    },
+    alwaysOnTop:true,
   });
-
+win.removeMenu()
   win.loadFile(`${path}/index.html`);
   win.webContents.openDevTools();
 
-  return win; // Retorne a instância, caso necessário
+  return win;
 }
 
 module.exports = NavigatorWindow;
