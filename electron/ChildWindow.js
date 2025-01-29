@@ -5,11 +5,16 @@ function ChildWindow(path) {
     height: 500,
     width: 700,
     resizable: false,
-    webPreferences,
+    webPreferences: {
+      contextIsolation: false,
+      nodeIntegration: true,
+      nodeIntegrationInSubFrames: true,
+    },
+    frame: false,
     alwaysOnTop: true,
   });
+  win.hide();
   win.removeMenu();
-  win.loadFile(`${path}/index.html`);
   if (developerMode) {
     win.openDevTools({ mode: "detach" });
   }

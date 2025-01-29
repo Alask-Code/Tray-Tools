@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src='https://unpkg.com/@phosphor-icons/web@2.1.1'></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="../../utils/frame.js" defer type="module"></script>
+  <script src="app.js" defer></script>
+  <title>Base64 Encoder & Decoder</title>
+</head>
+
+<body>
+  <div class="encoder-wrapper">
+    <div class="label">
+      <i class="ph ph-arrow-bend-right-down"></i>
+      <h1>Encoder</h1>
+    </div>
+    <div class="content">
+      <input class="encoder-input" type="text" placeholder="Paste or Type Plain Text">
+      <input class="encoder-output" type="text" disabled value="Output">
+      <button class="submit-encoder">Encode It</button>
+    </div>
+  </div>
+  <div class="decoder-wrapper">
+    <div class="label">
+      <i class="ph ph-arrow-bend-left-up"></i>
+      <h1>Decoder</h1>
+    </div>
+    <div class="content">
+      <input class="decoder-input" type="text" placeholder="Paste Base64 String">
+      <input class="decoder-output" type="text" disabled>
+      <button class="submit-decoder">Decode It</button>
+    </div>
+  </div>
+</body>
+
+</html>

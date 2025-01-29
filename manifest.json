@@ -1,7 +1,7 @@
 {
   "appName": "Tray Tools",
   "version": "1.2.0",
-  "developerMode": false,
+  "developerMode": true,
   "featureFlags": {
     "BrowserWindow": {
       "enabled": true,

@@ -7,9 +7,15 @@
       "useWidgetScreen": true
     },
     {
+      "name": "B64 Encoder",
+      "pathToApp": "application/com.alaskcode.traytools.base64encdec",
+      "icon": "ph-code",
+      "useWidgetScreen": false
+    },
+    {
       "name": "System Glass",
       "pathToApp": "application/com.alaskcode.traytools.systemglass",
-      "icon": "ph-app-window",
+      "icon": "ph-cpu",
       "useWidgetScreen": false
     },
     {

@@ -1,7 +1,7 @@
 @import "../../../src/scss/modules/core";
 
 body {
-  @include flex(center, center, column);
+  @include flex(start, center, column);
   color: black;
 }
 .label {
