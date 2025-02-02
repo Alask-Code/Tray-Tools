@@ -1,20 +1,20 @@
-const { ipcMain } = require("electron");
+const { ipcMain,app } = require("electron");
 const ChildWindow = require("./ChildWindow");
 
 function registerIpcMain() {
-  const childWindow = ChildWindow();
+  let childWindow;
   ipcMain.on("createWindow", (event, pathToFile) => {
+    childWindow = ChildWindow();
     console.log(pathToFile);
-
     childWindow.loadFile(`${pathToFile}/index.html`);
-    childWindow.show();
-    event.reply("created window for " + pathToFile);
+    childWindow.show();  
+    console.log("created window for " + pathToFile);
   });
   ipcMain.on("minimize", (event) => {
     childWindow.minimize();
   });
   ipcMain.on("close", (event) => {
-    childWindow.hide();
+    childWindow.close();
   });
 }
 
