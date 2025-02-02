@@ -1,20 +1,38 @@
-const { ipcMain,app } = require("electron");
+const { ipcMain, BrowserWindow } = require("electron");
 const ChildWindow = require("./ChildWindow");
 
 function registerIpcMain() {
-  let childWindow;
+  const childWindows = new Map();
+
   ipcMain.on("createWindow", (event, pathToFile) => {
-    childWindow = ChildWindow();
-    console.log(pathToFile);
+    const childWindow = ChildWindow();
+    
+    // Garante que estamos armazenando a instância correta
+    const windowId = childWindow.webContents.id;
+    childWindows.set(windowId, childWindow);
+
+    console.log(`Creating window for ${pathToFile}`);
     childWindow.loadFile(`${pathToFile}/index.html`);
-    childWindow.show();  
-    console.log("created window for " + pathToFile);
+    childWindow.show();
   });
+
   ipcMain.on("minimize", (event) => {
-    childWindow.minimize();
+    const childWindow = childWindows.get(event.sender.id);
+    if (childWindow && !childWindow.isDestroyed()) {
+      childWindow.minimize();
+    } else {
+      console.error("No child window found to minimize for sender id:", event.sender.id);
+    }
   });
+
   ipcMain.on("close", (event) => {
-    childWindow.close();
+    const childWindow = childWindows.get(event.sender.id);
+    if (childWindow && !childWindow.isDestroyed()) {
+      childWindow.close();
+      childWindows.delete(event.sender.id);
+    } else {
+      console.error("No child window found to close for sender id:", event.sender.id);
+    }
   });
 }
 

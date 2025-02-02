@@ -1,20 +1,26 @@
 .window-frame {
   display: flex;
   justify-content: end;
-  padding: 6px;
+  padding: 3px;
   top: 0;
-  gap: 6px;
   width: 100%;
   position: fixed;
   background: rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid black;
   -webkit-app-region: drag;
   button {
+    cursor: pointer;
     -webkit-app-region: no-drag;
     background-color: blue;
     border-radius: 50%;
-    padding: 8px;
+    padding: 6px;
+  }
+  .controls {
+    display: flex;
+    gap: 3px;
+    padding: 3px;
+    border-radius: 9px;
+    background: rgba(0, 0, 0, 0.25);
   }
   .minimize-button {
     background: yellowgreen;
