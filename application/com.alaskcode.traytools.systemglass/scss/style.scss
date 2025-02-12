@@ -1,0 +1,16 @@
+@import "../../../src/scss/modules/core";
+
+body {
+  @include flex(stretch, stretch, row);
+  padding: 8px;
+  gap: 8px;
+}
+.left-panel,
+.right-panel {
+  width: 25%;
+  background: red;
+}
+.center-panel {
+  width: 50%;
+  background: blue;
+}

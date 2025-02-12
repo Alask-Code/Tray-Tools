@@ -16,6 +16,7 @@
       "name": "System Glass",
       "pathToApp": "application/com.alaskcode.traytools.systemglass",
       "icon": "ph-cpu",
+      "isFullscreen": true,
       "useWidgetScreen": false
     },
     {

@@ -12,7 +12,7 @@ function createLabel(appName) {
 function createID(appName, appList) {
   return `${String(appName)
     .replaceAll(" ", "")
-    .toString("camel")}-${apps.indexOf(appName)}`;
+    .toString("camel")}-${appList.indexOf(appName)}`;
 }
 
 function createIcon(appIcon) {
@@ -46,7 +46,10 @@ function createMenuItem(app) {
 apps.forEach((app) => {
   const menuItem = createMenuItem(app);
   menuItem.addEventListener("click", () => {
-    ipcRenderer.send("createWindow", app.pathToApp);
+    ipcRenderer.send("createWindow", {
+      pathToFile: app.pathToApp,
+      isFullscreen: app.isFullscreen
+    });
   });
   document.body.querySelector(".menu").appendChild(menuItem);
 });

@@ -4,15 +4,15 @@ const ChildWindow = require("./ChildWindow");
 function registerIpcMain() {
   const childWindows = new Map();
 
-  ipcMain.on("createWindow", (event, pathToFile) => {
+  ipcMain.on("createWindow", (event, options) => {
     const childWindow = ChildWindow();
     
-    // Garante que estamos armazenando a instância correta
     const windowId = childWindow.webContents.id;
     childWindows.set(windowId, childWindow);
 
-    console.log(`Creating window for ${pathToFile}`);
-    childWindow.loadFile(`${pathToFile}/index.html`);
+    console.log(`Creating window for ${options.pathToFile}`);
+    childWindow.loadFile(`${options.pathToFile}/index.html`);
+    childWindow.setFullScreen(options.isFullscreen)
     childWindow.show();
   });
 
